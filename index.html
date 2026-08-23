@@ -97,6 +97,72 @@ footer{text-align:center;padding:45px 18px;color:#756d7d}
 .float-heart{position:absolute;bottom:-30px;animation:float 5s linear forwards;opacity:.8}
 @keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
 @media(max-width:560px){.grid,.open-grid{grid-template-columns:1fr}}
+/* ===== NEW MEMORY GALLERY ===== */
+
+.memory-gallery {
+  columns: 2 250px;
+  column-gap: 16px;
+  width: 100%;
+}
+
+.memory {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  overflow: hidden;
+  margin: 0 0 16px;
+  border-radius: 22px;
+  background: #17131f;
+  border: 1px solid #2b2434;
+  box-shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+
+.memory img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.memory::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
+  pointer-events: none;
+}
+
+.memory-caption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 17px;
+  z-index: 2;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0,0,0,.8);
+}
+
+@media (max-width: 560px) {
+  .memory-gallery {
+    columns: 2;
+    column-gap: 10px;
+  }
+
+  .memory {
+    margin-bottom: 10px;
+    border-radius: 17px;
+  }
+
+  .memory-caption {
+    font-size: 13px;
+  }
+}
 
 </style>
 </head>
@@ -138,18 +204,50 @@ footer{text-align:center;padding:45px 18px;color:#756d7d}
 </section>
 
 <section class="section">
-  
-    <div class="badge">          ·Little memories</div>
+
+  <div class="container">
+
+    <div class="badge">📸 Little memories</div>
+
     <h2>The moments I keep.</h2>
-    <div class="memory">
-      <img src="photo1.jpg" alt="Our memory"></div>
-       <img src="photo2.jpg" alt="Our memory"></div>
-         <img src="photo4.jpg" alt="Our memory"></div>
-          <img src="photo5.jpg" alt="Our memory"></div>
-           <img src="photo6.jpg" alt="Our memory"></div>
-            <img src="photo7.jpg" alt="Our memory"></div>
+
+    <div class="memory-gallery">
+
+      <div class="memory">
+        <img src="photo1.jpg" alt="Our memory">
+        <div class="memory-caption">I like this photo so badly ❤️</div>
+      </div>
+
+      <div class="memory">
+        <img src="photo2.jpg" alt="Our memory">
+        <div class="memory-caption">u look so cute in this,mwaa ❤️</div>
+      </div>
+
       
-    
+      <div class="memory">
+        <img src="photo4.jpg" alt="Our memory">
+        <div class="memory-caption">I love it when u rest on me 🫶</div>
+      </div>
+
+      <div class="memory">
+        <img src="photo5.jpg" alt="Our memory">
+        <div class="memory-caption">Im so ded with that look in ur eyes</div>
+      </div>
+
+      <div class="memory">
+        <img src="photo6.jpg" alt="Our memory">
+        <div class="memory-caption">I loved our first kiss ❤️</div>
+      </div>
+
+      <div class="memory">
+        <img src="photo7.jpg" alt="Our memory">
+        <div class="memory-caption">U were so close to me 🥹</div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 
